@@ -24,14 +24,20 @@ app.get("/findLocation", (req, res) => {
 
     for (const area in municipalityData["Areas"]) {
       const neighbourhoods = municipalityData["Areas"][area]["Neighbourhoods"];
+      console.log("✌️neighbourhoods --->", neighbourhoods);
 
       for (const neighbourhood in neighbourhoods) {
         if (neighbourhoods[neighbourhood].Landmarks.includes(landmark)) {
           return res.json({ locationName: neighbourhoods[neighbourhood].Name });
         }
+        console.log(
+          "✌️neighbourhoods[neighbourhood].Name --->",
+          neighbourhoods[neighbourhood].Name
+        );
       }
     }
   } catch (error) {
+    console.log("✌️error --->", error);
     return res.status(404).json({
       error: "Location not found for the given landmark and municipality.",
     });

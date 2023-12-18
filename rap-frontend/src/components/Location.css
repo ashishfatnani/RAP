@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .formContainer {
+    margin-bottom: 16px;
+  }
+  
+  .inputField {
+    width: 300px;
+    margin-right: 8px;
+  }
+  
+  .resultMessage {
+    margin-top: 16px;
+    color: green;
+  }
+  
+  .errorMessage {
+    color: red;
+  }
+  
