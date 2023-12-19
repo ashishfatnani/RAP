@@ -14,11 +14,12 @@ const Location = () => {
 
   const handleFindLocation = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/findLocation", {
+      const response = await axios.post("http://localhost:5000/findLocation", {
         landmark,
         municipality,
         region,
       });
+
       setLocationName(response.data.locationName);
       setError("");
     } catch (error) {
@@ -31,8 +32,8 @@ const Location = () => {
       <h1>Find Location</h1>
       <div className="formContainer">
         <Search
-          placeholder="Enter Landmark"
-          onChange={(e) => setLandmark(e.target.value)}
+          placeholder="Enter Region"
+          onChange={(e) => setRegion(e.target.value)}
           className="inputField"
         />
         <Search
@@ -41,8 +42,8 @@ const Location = () => {
           className="inputField"
         />
         <Search
-          placeholder="Enter Region"
-          onChange={(e) => setRegion(e.target.value)}
+          placeholder="Enter Landmark"
+          onChange={(e) => setLandmark(e.target.value)}
           className="inputField"
         />
       </div>

@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const port = 5000;
 const locationData = require("./locationData.js");
 const app = express();
@@ -6,8 +7,10 @@ const app = express();
 //Body Parser
 app.use(express.json());
 
+app.use(cors());
+
 // Endpoint to find the location based on the landmark and municipality and region
-app.get("/findLocation", (req, res) => {
+app.post("/findLocation", (req, res) => {
   try {
     const { landmark, municipality, region } = req.body;
     if (!landmark || !municipality || !region) {
@@ -27,8 +30,15 @@ app.get("/findLocation", (req, res) => {
       console.log("✌️neighbourhoods --->", neighbourhoods);
 
       for (const neighbourhood in neighbourhoods) {
-        if (neighbourhoods[neighbourhood].Landmarks.includes(landmark)) {
-          return res.json({ locationName: neighbourhoods[neighbourhood].Name });
+        const isMatch = neighbourhoods[neighbourhood].Landmarks.find(
+          (item) => item.Name === landmark
+        );
+        console.log("✌️isMatch --->", isMatch);
+        if (isMatch) {
+          return res.json({
+            locationName: neighbourhoods[neighbourhood].Name,
+            description: isMatch.Description,
+          });
         }
         console.log(
           "✌️neighbourhoods[neighbourhood].Name --->",
