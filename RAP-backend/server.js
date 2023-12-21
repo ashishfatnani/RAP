@@ -27,7 +27,6 @@ app.post("/findLocation", (req, res) => {
 
     for (const area in municipalityData["Areas"]) {
       const neighbourhoods = municipalityData["Areas"][area]["Neighbourhoods"];
-      console.log("✌️neighbourhoods --->", neighbourhoods);
 
       for (const neighbourhood in neighbourhoods) {
         const isMatch = neighbourhoods[neighbourhood].Landmarks.find(
@@ -38,6 +37,7 @@ app.post("/findLocation", (req, res) => {
           return res.json({
             locationName: neighbourhoods[neighbourhood].Name,
             description: isMatch.Description,
+            nearBy: neighbourhoods[neighbourhood].Nearby,
           });
         }
         console.log(

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Input, Button } from "antd";
+import { Input, Button, List } from "antd";
 
 import "./Location.css";
 const { Search } = Input;
@@ -10,6 +10,7 @@ const Location = () => {
   const [municipality, setMunicipality] = useState("");
   const [region, setRegion] = useState("");
   const [locationName, setLocationName] = useState("");
+  const [nearbyPlaces, setNearbyPlaces] = useState([]);
   const [error, setError] = useState("");
 
   const handleFindLocation = async () => {
@@ -21,10 +22,12 @@ const Location = () => {
       });
 
       setLocationName(response.data.locationName);
+      setNearbyPlaces(response.data.nearBy);
       setError("");
     } catch (error) {
       setError("Location not found for the given landmark and municipality.");
       setLocationName("");
+      setNearbyPlaces([]);
     }
   };
   return (
@@ -52,6 +55,16 @@ const Location = () => {
       </Button>
       {locationName && (
         <p className="resultMessage">Location Name: {locationName}</p>
+      )}
+      {nearbyPlaces.length > 0 && (
+        <div>
+          <h3>Nearby Places:</h3>
+          <List
+            bordered
+            dataSource={nearbyPlaces}
+            renderItem={(place) => <List.Item>{place}</List.Item>}
+          />
+        </div>
       )}
       {error && <p className="errorMessage">{error}</p>}
     </div>

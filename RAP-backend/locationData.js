@@ -24,6 +24,7 @@ const locationData = {
                       "Historic train station and transportation hub.",
                   },
                 ],
+                Nearby: ["Entertainment District", "Harbourfront"],
               },
               {
                 Name: "Entertainment District",
@@ -42,6 +43,7 @@ const locationData = {
                     Description: "Cultural center for film and media.",
                   },
                 ],
+                Nearby: ["Financial District", "Harbourfront"],
               },
               {
                 Name: "Harbourfront",
@@ -62,6 +64,7 @@ const locationData = {
                       "Aquarium showcasing marine life and habitats.",
                   },
                 ],
+                Nearby: ["Financial District", "Entertainment District"],
               },
             ],
           },
@@ -85,6 +88,7 @@ const locationData = {
                       "Light rail transit line connecting east and west.",
                   },
                 ],
+                Nearby: ["Davisville", "Forest Hill"],
               },
               {
                 Name: "Davisville",
@@ -103,6 +107,7 @@ const locationData = {
                     Description: "Retail district with shops and dining.",
                   },
                 ],
+                Nearby: ["Yonge and Eglinton", "Forest Hill"],
               },
               {
                 Name: "Forest Hill",
@@ -121,6 +126,7 @@ const locationData = {
                       "Private boys' school with a prestigious history.",
                   },
                 ],
+                Nearby: ["Yonge and Eglinton", "Davisville"],
               },
             ],
           },
@@ -144,6 +150,7 @@ const locationData = {
                     Description: "Community park with sports facilities.",
                   },
                 ],
+                Nearby: ["The Beaches", "Riverdale"],
               },
               {
                 Name: "The Beaches",
@@ -164,6 +171,7 @@ const locationData = {
                       "Park with gardens, a playground, and a wading pool.",
                   },
                 ],
+                Nearby: ["Leslieville", "Riverdale"],
               },
               {
                 Name: "Riverdale",
@@ -183,6 +191,7 @@ const locationData = {
                       "Vibrant neighborhood with Greek-inspired shops and dining.",
                   },
                 ],
+                Nearby: ["Leslieville", "The Beaches"],
               },
             ],
           },
@@ -205,6 +214,7 @@ const locationData = {
                     Description: "Scenic pond within High Park.",
                   },
                 ],
+                Nearby: ["Bloor West Village", "The Junction"],
               },
               {
                 Name: "Bloor West Village",
@@ -224,6 +234,7 @@ const locationData = {
                       "Independent cinema showcasing a variety of films.",
                   },
                 ],
+                Nearby: ["High Park", "The Junction"],
               },
               {
                 Name: "The Junction",
@@ -242,6 +253,7 @@ const locationData = {
                       "Shopping and dining district in the Stockyards area.",
                   },
                 ],
+                Nearby: ["High Park", "Bloor West Village"],
               },
             ],
           },
@@ -265,6 +277,7 @@ const locationData = {
                     Description: "Shopping complex with stores and dining.",
                   },
                 ],
+                Nearby: ["Don Mills", "York Mills"],
               },
               {
                 Name: "Don Mills",
@@ -283,6 +296,7 @@ const locationData = {
                       "Botanical garden and park with walking trails.",
                   },
                 ],
+                Nearby: ["Willowdale", "York Mills"],
               },
               {
                 Name: "York Mills",
@@ -301,6 +315,7 @@ const locationData = {
                       "Community park in the York Mills neighborhood.",
                   },
                 ],
+                Nearby: ["Willowdale", "Don Mills"],
               },
             ],
           },
@@ -330,6 +345,7 @@ const locationData = {
                       "Venue for performing arts and cultural events.",
                   },
                 ],
+                Nearby: ["Streetsville"],
               },
               {
                 Name: "Streetsville",
@@ -349,6 +365,7 @@ const locationData = {
                       "Community center with recreational facilities.",
                   },
                 ],
+                Nearby: ["City Centre"],
               },
             ],
           },
@@ -378,6 +395,7 @@ const locationData = {
                       "Major transit station for GO Transit services.",
                   },
                 ],
+                Nearby: ["The Kingsway"],
               },
               {
                 Name: "The Kingsway",
@@ -398,6 +416,7 @@ const locationData = {
                       "Private golf and country club in The Kingsway.",
                   },
                 ],
+                Nearby: ["Islington-City Centre West"],
               },
             ],
           },
@@ -432,6 +451,7 @@ const locationData = {
                       "Stretch of Fifth Avenue with numerous museums and cultural institutions.",
                   },
                 ],
+                Nearby: ["Chelsea", "Harlem"],
               },
               {
                 Name: "Chelsea",
@@ -453,6 +473,7 @@ const locationData = {
                       "Sculptural staircase and landmark in Hudson Yards.",
                   },
                 ],
+                Nearby: ["Upper East Side", "Harlem"],
               },
               {
                 Name: "Harlem",
@@ -473,6 +494,7 @@ const locationData = {
                       "Contemporary art museum focusing on African American artists.",
                   },
                 ],
+                Nearby: ["Upper East Side", "Chelsea"],
               },
             ],
           },
@@ -496,6 +518,7 @@ const locationData = {
                     Description: "Park with waterfront views and events.",
                   },
                 ],
+                Nearby: ["DUMBO", "Park Slope"],
               },
               {
                 Name: "DUMBO",
@@ -516,6 +539,7 @@ const locationData = {
                       "Performing arts venue in a renovated tobacco warehouse.",
                   },
                 ],
+                Nearby: ["Williamsburg", "Park Slope"],
               },
               {
                 Name: "Park Slope",
@@ -536,6 +560,7 @@ const locationData = {
                       "Multi-purpose arena hosting sports and entertainment events.",
                   },
                 ],
+                Nearby: ["Williamsburg", "DUMBO"],
               },
             ],
           },
@@ -561,6 +586,7 @@ const locationData = {
                       "Cultural venue and beer garden with Czech and Slovak influences.",
                   },
                 ],
+                Nearby: ["Flushing", "Long Island City"],
               },
               {
                 Name: "Flushing",
@@ -581,6 +607,7 @@ const locationData = {
                       "Home stadium of the New York Mets baseball team.",
                   },
                 ],
+                Nearby: ["Astoria", "Long Island City"],
               },
               {
                 Name: "Long Island City",
@@ -601,6 +628,7 @@ const locationData = {
                       "Cantilever bridge connecting Queens and Manhattan.",
                   },
                 ],
+                Nearby: ["Astoria", "Flushing"],
               },
             ],
           },
@@ -626,6 +654,7 @@ const locationData = {
                       "One of the largest metropolitan zoos in the world.",
                   },
                 ],
+                Nearby: ["Fordham", "Throgs Neck"],
               },
               {
                 Name: "Fordham",
@@ -646,6 +675,7 @@ const locationData = {
                       "Botanical garden featuring a diverse collection of plants.",
                   },
                 ],
+                Nearby: ["Riverdale", "Throgs Neck"],
               },
               {
                 Name: "Throgs Neck",
@@ -666,6 +696,7 @@ const locationData = {
                       "Public maritime college offering undergraduate and graduate programs.",
                   },
                 ],
+                Nearby: ["Riverdale", "Fordham"],
               },
             ],
           },
@@ -690,6 +721,7 @@ const locationData = {
                     Description: "Baseball stadium hosting minor league games.",
                   },
                 ],
+                Nearby: ["Tottenville", "New Dorp"],
               },
               {
                 Name: "Tottenville",
@@ -710,6 +742,7 @@ const locationData = {
                       "Living history village and museum showcasing colonial life.",
                   },
                 ],
+                Nearby: ["St. George", "New Dorp"],
               },
               {
                 Name: "New Dorp",
@@ -729,6 +762,7 @@ const locationData = {
                       "Living history village and museum showcasing colonial life.",
                   },
                 ],
+                Nearby: ["St. George", "Tottenville"],
               },
             ],
           },

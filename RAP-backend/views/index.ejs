@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Finder</title>
+
+  <!-- Include Ant Design CSS here -->
+  
+</head>
+
+<body>
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h1 style="text-align: center;">Location Finder</h1>
+    
+    <form action="/findLocation" method="post">
+      <div style="margin-bottom: 16px;">
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region" required>
+      </div>
+      
+      <div style="margin-bottom: 16px;">
+        <label for="municipality">Municipality:</label>
+        <input type="text" id="municipality" name="municipality" required>
+      </div>
+      
+      <div style="margin-bottom: 16px;">
+        <label for="landmark">Landmark:</label>
+        <input type="text" id="landmark" name="landmark" required>
+      </div>
+      
+      <div>
+        <button type="submit" style="width: 100%; background-color: #1890ff; color: #fff; padding: 8px; border: none; cursor: pointer;">Find Location</button>
+      </div>
+    </form>
+
+    <% if (locationName) 
+    console.log('✌️locationName --->', locationName);
+    { %>
+      <h2 style="margin-top: 20px;">Location Details:</h2>
+      <p><strong>Location Name:</strong> <%= locationName %></p>
+      <p><strong>Description:</strong> <%= description %></p>
+      <p><strong>Nearby:</strong> <%= nearBy %></p>
+    <% } %>
+    
+  </div>
+</body>
+
+</html>
