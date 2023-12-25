@@ -17,7 +17,12 @@
     <form action="/findLocation" method="post">
       <div style="margin-bottom: 16px;">
         <label for="region">Region:</label>
-        <input type="text" id="region" name="region" required>
+        <!-- <input type="text" id="region" name="region" required> -->
+        <select id="region" name="region" required>
+          <option>Select Region</option>
+          <option value="GTA">Greater Toronto Area (GTA)</option>
+          <option value="NewYork">New York</option>
+        </select>
       </div>
       
       <div style="margin-bottom: 16px;">
@@ -36,7 +41,6 @@
     </form>
 
     <% if (locationName) 
-    console.log('✌️locationName --->', locationName);
     { %>
       <h2 style="margin-top: 20px;">Location Details:</h2>
       <p><strong>Location Name:</strong> <%= locationName %></p>
@@ -46,5 +50,4 @@
     
   </div>
 </body>
-
 </html>
